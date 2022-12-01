@@ -1,8 +1,17 @@
 import express from 'express';
-import dotenv, { config } from 'dotenv'
+import 'reflect-metadata'
+import dotenv from 'dotenv'
+import apiRoutes from './routers/routes';
 const app = express();
 dotenv.config();
 
+
+app.use(express.json())
+app.use(apiRoutes)
+
+app.use((request, response) => {
+    response.json( {msg: "Rota não encontrada"} )
+} );
 
 
 

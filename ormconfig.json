@@ -1,0 +1,18 @@
+{
+    "name": "development",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "Senha@edu9125",
+    "database": "postgres",
+    "synchronize": true,
+    "logging": false,
+    "logger": true,
+    "entities": ["src/modules/*/**/infra/typeorm/entities/*{.js,.ts}"],
+    "migrations": ["src/shared/infra/typeorm/migrations/*{.js,.ts}"],
+    "cli": {
+      "migrationsDir": "src/shared/infra/typeorm/migrations",
+      "entitiesDir": ["src/modules/*/**/infra/typeorm/entities/*{.js,.ts}"]
+    }
+}
